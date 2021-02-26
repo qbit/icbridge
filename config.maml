@@ -1,0 +1,13 @@
+icb.nick = qbot
+icb.server = suah.dev
+icb.group = suah
+icb.port = 7326
+
+matrix.server = tapenet.org
+
+bridge.id = ICBridge
+bridge.url = http://localhost:9000
+
+# openssl rand -base64 32
+bridge.as_token = fake
+bridge.hs_token = faker

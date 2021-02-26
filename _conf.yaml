@@ -1,0 +1,14 @@
+id: "%s"
+url: "%s"
+as_token: "%s"
+hs_token: "%s"
+sender_localpart: "_icb_bot"
+namespaces:
+  users:
+    - exclusive: true
+      regex: "@_icbridge_.*"
+  aliases:
+    - exclusive: false
+      regex: "#_icbridge_.*"
+  rooms: []
+
