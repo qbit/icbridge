@@ -107,6 +107,8 @@ func main() {
 	group := conf.get("icb.group")
 	port := conf.get("icb.port")
 
+	serverListen := conf.get("bridge.listen")
+
 	if *genYaml {
 		makeYaml(conf)
 		os.Exit(0)
@@ -195,5 +197,5 @@ func main() {
 		}
 	})
 
-	log.Fatal(http.ListenAndServe(":9000", nil))
+	log.Fatal(http.ListenAndServe(serverListen, nil))
 }
