@@ -7,7 +7,7 @@ matrix.server = tapenet.org
 
 bridge.id = ICBridge
 bridge.url = http://localhost:9000
-bridge.lesten = 127.0.0.1:9000
+bridge.listen = 127.0.0.1:9000
 
 # openssl rand -base64 32
 bridge.as_token = fake
