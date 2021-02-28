@@ -71,10 +71,7 @@ type Events struct {
 	Events []Event `json:"events"`
 }
 
-// HSToken is a token given to us by the homeserver after we register as an
-// application service.
-type HSToken struct {
-	Token string `json:"hs_token"`
+func postICBtoMatrix() {
 }
 
 func makeYaml(c config) {
