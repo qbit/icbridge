@@ -186,13 +186,25 @@ func main() {
 				return
 			}
 			switch e.EventType {
+			case "m.room.create":
+				w.WriteHeader(http.StatusOK)
+				w.Write([]byte(`{}`))
+				err = c.Write([]string{"b", "Holeee"})
+				if err != nil {
+					log.Println(err)
+				}
 			case "m.room.message":
+				w.WriteHeader(http.StatusOK)
+				w.Write([]byte(`{}`))
 				err = c.Write([]string{"b", e.Content["body"].(string)})
 				if err != nil {
 					log.Println(err)
 				}
 			default:
+				fmt.Printf("%v#\n", e)
 				fmt.Println(e.EventType, "unknown event type")
+				w.WriteHeader(http.StatusOK)
+				w.Write([]byte(`{}`))
 			}
 		}
 	})
